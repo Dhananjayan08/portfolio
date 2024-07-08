@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/3b7edbf312.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="header">
+      <div class="container">
+        <nav>
+          <img src="./images/logo.png" class="logo">
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Software Engineer</p>
+          <h1>Hi, I'm <span>Dhananjayan</span> <br>from Easwari Engineering College</h1>
+        </div>
+      </div>
+  </div>
+
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="./images/d1.png" alt="">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Consistant student with expertise in Python, C, C++, and Java. Proven track record of developing
+            innovative solutions for complex problems. Skilled in database design, algorithm development,
+            and project management. Strong communication skills and ability to work effectively in a team
+            environment. Passionate about continuously learning and adapting to new technologies to deliver
+            high-quality software products. Seeking new challenges in a dynamic organization where I can utilize
+            my technical skills to drive business growth.</p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Programming Lang</span><br>Python, Java, C/C++, HTML,CSS</li>
+                <li><span>Web Developer</span><br>Web Interface Development</li> 
+                <li><span>VLSI-Design</span><br>Verilog HDL</li>               
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2019</span><br>SSLC(CGPA-7.1)</li>
+                <li><span>2021</span><br>HSC(CGPA-6.8)</li> 
+                <li><span>2021-2025*</span><br>BE-ECE(CGPA-8.3)</li>               
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Event-Volunteer</span><br>Futsal</li>
+                <li><span>Event-Organiser</span><br>Robo-line-follower</li> 
+                <li><span>Event-Head</span><br>Robo-line-follower & Futsal</li>               
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ------services------- -->
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+        <div>
+          <i class="fa-solid fa-window-maximize"></i>
+          <h2>Web design</h2>
+          <p>Have Experience in creating a new website from scratch 
+            using vscode by using html , css and javascript</p>
+            <a href="https://github.com/Dhananjayan08">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Coding</h2>
+          <p>Have great knowledge in coding and 
+            solved many coding problems in Leetcode and GeeksforGeeks</p>
+            <a href="https://leetcode.com/u/Dhananjayan08/">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h2>My Projects</h2>
+          <p>Have done various projects in the past years with my knowledge </p>
+            <a href="./project.html">Learn more</a>
+        </div>
+    </div>
+
+  </div>
+</div>
+<!----portfolio------>
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p> <i class="fa-solid fa-envelope"></i> dhananjayan2004@gmail.com</p>
+        <p> <i class="fa-solid fa-phone"></i>7550207948</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/naveen__pvt__/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/dhananjayan-karthikeyan-nk8304/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="cv" >
+        <a href="./Resume.pdf" download class="btn btn2">DOWNLOAD RESUME</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="copy-right">
+  <p>©️ Copyright Dhananjayan</p>
+</div>
+<script>
+  var tablinks = document.getElementsByClassName("tab-links")
+  var tabcontents = document.getElementsByClassName("tab-contents")
+  
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link")
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+<script>
+  var sidemenu = document.getElementById("sidemenu");
+
+  function openmenu(){
+    sidemenu.style.right = "0";
+
+  }
+  function closemenu(){
+    sidemenu.style.right = "-200px";
+    
+  }
+
+</script>
+
+
+</body>
+</html>
